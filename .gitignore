@@ -1,26 +1,5 @@
 
-delete_me
 .DS_Store
-Week-1-Intro/database.sqlite
-Week-4-Pandas/movielens/genome-scores.csv
-Week-4-Pandas/movielens/genome-tags.csv
-Week-4-Pandas/movielens/Icon
-Week-4-Pandas/movielens/links.csv
-Week-4-Pandas/movielens/movies.csv
-Week-4-Pandas/movielens/ratings.csv
-Week-4-Pandas/movielens/README.txt
-Week-4-Pandas/movielens/tags.csv
-Week-5-Exercises/database.sqlite
-Week-5-Visualization/world-development-indicators/Country.csv
-Week-5-Visualization/world-development-indicators/CountryNotes.csv
-Week-5-Visualization/world-development-indicators/database.sqlite
-Week-5-Visualization/world-development-indicators/Footnotes.csv
-Week-5-Visualization/world-development-indicators/hashes.txt
-Week-5-Visualization/world-development-indicators/Indicators.csv
-Week-5-Visualization/world-development-indicators/Series.csv
-Week-5-Visualization/world-development-indicators/SeriesNotes.csv
-Week-7-MachineLearning/weather/minute_weather.csv
-Week-7-MachineLearning/database.sqlite
 datasets/database.sqlite
 datasets/movielens/genome-scores.csv
 datasets/movielens/genome-tags.csv
