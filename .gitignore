@@ -1,25 +1,3 @@
 
 .DS_Store
-datasets/database.sqlite
-datasets/movielens/genome-scores.csv
-datasets/movielens/genome-tags.csv
-datasets/movielens/Icon
-datasets/movielens/links.csv
-datasets/movielens/movies.csv
-datasets/movielens/ratings.csv
-datasets/movielens/README.txt
-datasets/movielens/tags.csv
-datasets/weather/daily_weather.csv
-datasets/weather/Icon
-datasets/weather/minute_weather.csv
-datasets/world-development-indicators/Country.csv
-datasets/world-development-indicators/CountryNotes.csv
-datasets/world-development-indicators/database.sqlite
-datasets/world-development-indicators/Footnotes.csv
-datasets/world-development-indicators/hashes.txt
-datasets/world-development-indicators/Indicators.csv
-datasets/world-development-indicators/Series.csv
-datasets/world-development-indicators/SeriesNotes.csv
-Week-1-Intro/..\Data\database.sqlite
-datasets/weather/Icon
-datasets/movielens/Icon
+datasets/
