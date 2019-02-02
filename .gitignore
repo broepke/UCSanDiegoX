@@ -3,3 +3,4 @@
 datasets/
 venv/
 .ipynb_checkpoints
+*.pkl
