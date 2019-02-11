@@ -1,13 +1,11 @@
-import math
+target = 2016
+counter = 0
 
-def divisorGenerator(n):
-    large_divisors = []
-    for i in range(1, int(math.sqrt(n) + 1)):
-        if n % i == 0:
-            yield i
-            if i*i != n:
-                large_divisors.append(n / i)
-    for divisor in reversed(large_divisors):
-        yield divisor
+for i in range(target):
+    try:
+        if target % i == 0:
+            counter += 1
+    except:
+        counter =+ 1
 
-print(len(list(divisorGenerator(2016))))
+print(counter)
