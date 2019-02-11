@@ -76,18 +76,17 @@ A = {-6, 3, 4, 5}
 B = {-6, 5, 13}
 U = A | B | {12, -2, -4}
 
-# print('Compliment of Products = ', complement_of_union(A, B, U))
+print('Compliment of Products = ', complement_of_union(A, B, U))
 
-# print('Intersection of Compliments = ', intersection_of_complements(A, B, U))
+print('Intersection of Compliments = ', intersection_of_complements(A, B, U))
 
-# print('\n##########\n')
+print('\n##########\n')
 
 A = {5}
 B = {5}
 S = {-1, 0}
 T = {0}
 
-# print('Product of Unions = ', product_of_unions(A, B, S, T))
-
+print('Product of Unions = ', product_of_unions(A, B, S, T))
 
 print('Union of Products', union_of_products(A, B, S, T))
