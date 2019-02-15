@@ -82,8 +82,8 @@ print('Intersection of Compliments = ', intersection_of_complements(A, B, U))
 
 print('\n##########\n')
 
-A = {5,6,7}
-B = {5,-1,-5}
+A = {5,6}
+B = {5,-1}
 S = {-1, 0}
 T = {0}
 
