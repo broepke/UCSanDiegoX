@@ -9,18 +9,21 @@
 # print('Total numbers divible by ' + str(target) + ' = ' + str(counter))
 
 
-# Of 100 foreign journalists who can speak Chinese, English or French at a press conference:
-#
-# 60 speak Chinese.
-#
-# 65 speak English.
-#
-# 60 speak French.
-#
-# 35 speak both Chinese and English.
-#
-# 25 speak both Chinese and French.
-#
-# 35 speak both English and French.
+A = {'00000', '10000', '20000', '00001', '00002'}
+B = {'01111', '11111', '21111', '11112', '11110'}
+C = {'02222', '12222', '22222', '22221', '22220'}
 
+union_of = A | B | C
+print(3 ** 5 - len(union_of))
 
+print(10**7)
+
+X = {'01234',
+'12345',
+'23456',
+'34567',
+'45678',
+'56789',
+'67890'}
+
+print(len(X))
