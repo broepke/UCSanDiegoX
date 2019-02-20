@@ -14,7 +14,7 @@ def combinations(A,k):
 
 print('\n#### FACTORIAL ####\n')
 
-N = 10
+N = 7
 
 # Find the factorial of a number
 print(factorial(N))
