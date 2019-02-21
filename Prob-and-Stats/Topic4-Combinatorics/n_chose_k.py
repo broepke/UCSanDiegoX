@@ -1,8 +1,8 @@
 from math import factorial
 import itertools
 
-target = 25
-k = 19
+target = 4
+k = 3
 A = set()
 
 for i in range(1,target+1):
