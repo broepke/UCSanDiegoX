@@ -23,7 +23,7 @@ def compositions(k, n):
                     to_process.append(newl)
 
 
-# print(set(compositions(2, 5)))
+print(set(compositions(2, 5)))
 
 # func_out = set(compositions(2, 5))
 # assert type(func_out).__name__ == "set"
@@ -57,7 +57,7 @@ def constrained_compositions(n, m):
 
     return new_set
 
-print(len(constrained_compositions(20,[12, 15, 5])))
+# print(len(constrained_compositions(20,[12, 15, 5])))
 
 
 # func_out = constrained_compositions(7, [1, 4, 4])
