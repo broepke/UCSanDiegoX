@@ -14,7 +14,7 @@ def combinations(A,k):
 
 print('\n#### FACTORIAL ####\n')
 
-N = 7
+N = 5
 
 # Find the factorial of a number
 print(factorial(N))
@@ -41,7 +41,7 @@ print("Size =  = {}".format(len(permute_k)))
 
 print('\n#### COMBINATIONS ####\n')
 
-A = {1, 2, 3, 4, 5}
+A = {3, 4, 5}
 k = 3
 
 # Print all the k-combinations of A
