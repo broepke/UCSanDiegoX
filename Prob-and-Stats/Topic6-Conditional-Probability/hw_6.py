@@ -11,6 +11,5 @@ def conditional__probability(rA, wA, rB, wB):
 
     return bayes
 
-
 assert( abs(conditional__probability(2., 4., 3., 3.) -0.5714285714285715) < 10**-5)
 assert( abs(conditional__probability(1., 3., 5., 2.) -0.7241379310344829) < 10**-5)
