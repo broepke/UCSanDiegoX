@@ -15,4 +15,4 @@ n = len(A)
 # print("Number of combinations = {}".format(len(choose_k)  ))
 
 # Print |A|!/(k!(|A|-k)!) directly
-print("Size = %{}!/(%{}!(%{}-%{})!)={}".format(n,k,n,k,int(factorial(len(A))/(factorial(k)*factorial(len(A)-k)))))
+print(int(factorial(len(A))/(factorial(k)*factorial(len(A)-k))))

@@ -1,7 +1,7 @@
 from math import factorial
 
-target = 20
-k = 25
+target = 5
+k = 3
 A = set()
 
 for i in range(1,target+1):
