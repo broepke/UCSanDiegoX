@@ -32,5 +32,3 @@ tweets_lower = mean - (inv_theta*std_error)
 tweets_upper = mean + (inv_theta*std_error)
 
 print('the bounds of number of tweets is =', tweets_lower, tweets_upper)
-
-# tweets =
