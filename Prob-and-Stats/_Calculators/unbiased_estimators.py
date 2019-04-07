@@ -2,8 +2,6 @@ import scipy.stats as sp
 import numpy as np
 from math import sqrt
 
-# list = [5, 25, 15, 10, 7, 12, 16, 20]
-#list = [2,1,4,2,6]
 list = [60, 56, 61, 68, 51, 53, 69, 54]
 total = 0
 
