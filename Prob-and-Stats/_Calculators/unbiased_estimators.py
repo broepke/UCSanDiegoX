@@ -15,6 +15,7 @@ print("mean = ", mu)
 print("std. dev. = ", sigma)
 print("raw variance ('S^2') = ", var)
 print('standard error of the mean = ', sem)
+print("standard error = ", sigma/sqrt(n))
 
 # Calculate the "Unbiased Sample Variance"
 for i in list:
