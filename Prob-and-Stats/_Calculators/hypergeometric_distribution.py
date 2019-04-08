@@ -10,12 +10,9 @@ import matplotlib.pyplot as plt
 
 [M, n, N] = [20, 7, 12]
 rv = hypergeom(M, n, N)
-x = np.arange(0, n+1)
+# x = np.arange(0, n+1)
+x = n-1
 pmf_dogs = rv.pmf(x)
-
-print(rv)
-print(x)
-print(pmf_dogs)
 
 fig = plt.figure()
 ax = fig.add_subplot(111)
@@ -23,7 +20,11 @@ ax.plot(x, pmf_dogs, 'bo')
 ax.vlines(x, 0, pmf_dogs, lw=2)
 ax.set_xlabel('# of dogs in our group of chosen animals')
 ax.set_ylabel('hypergeom PMF')
-plt.show()
+# plt.show()
 
-prb = hypergeom.cdf(x, M, n, N)
-print(prb)
+
+cdf_ = hypergeom.cdf(x, M, n, N)
+sf_ = hypergeom.sf(x, M, n, N)
+
+print(cdf_)
+print(sf_)
