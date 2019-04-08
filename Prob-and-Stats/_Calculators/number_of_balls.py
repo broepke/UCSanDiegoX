@@ -5,7 +5,7 @@
 
 # the easier math on this is nCk or n! / k! * (n-k)! -
 # then you need the number of those that are divisibile by 3.  I don't know this other
-# than by the code - lol ;) 
+# than by the code - lol ;)
 
 import itertools
 from scipy.special import *
@@ -20,7 +20,8 @@ print("{}-combinations of {}: {}".format(k, A, choose_k))
 print("Number of combinations = {}".format(len(choose_k)))
 
 # Print |A|!/(k!(|A|-k)!) directly
-print("Size = %{}!/(%{}!(%{}-%{})!)={}".format(n, k, n, k, int(factorial(len(A)) / (factorial(k) * factorial(len(A) - k)))))
+print("Size = %{}!/(%{}!(%{}-%{})!)={}".format(n, k, n, k,
+                                               int(factorial(len(A)) / (factorial(k) * factorial(len(A) - k)))))
 
 counter = 0
 

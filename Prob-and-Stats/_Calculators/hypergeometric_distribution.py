@@ -1,27 +1,29 @@
 import numpy as np
 from scipy.stats import hypergeom
+import matplotlib.pyplot as plt
 
-# Suppose you have a jar containing 10 red marbles and 90 black marbles.
-# You collect 10 marbles from the jar.
-# What is the probability you collect k red marbles?
+# Suppose we have a collection of 20 animals, of which 7 are dogs.
+# Then if we want to know the probability of finding a given number
+# of dogs if we choose at random 12 of the 20 animals,
+# we can initialize a frozen distribution and plot the
+# probability mass function:
 
-# The population size, usually denoted N.
-# In this case, the total number of marbles in the jar: 100.
-# The number of “successes” in the population, usually denoted K.
-# In this case, the number of red marbles in the jar: 10.
-# The sample size, usually denoted n.
-# In this case, the number of draws from the jar: 10.
+[M, n, N] = [20, 7, 12]
+rv = hypergeom(M, n, N)
+x = np.arange(0, n+1)
+pmf_dogs = rv.pmf(x)
 
-# M is the population size (previously N)
-# n is the number of successes in the population (previously K)
-# N is the sample size (previously n)
-# X is still the number of drawn “successes”.
+print(rv)
+print(x)
+print(pmf_dogs)
 
-M = 10
-n = 3
-N = 3
-x = 3
+fig = plt.figure()
+ax = fig.add_subplot(111)
+ax.plot(x, pmf_dogs, 'bo')
+ax.vlines(x, 0, pmf_dogs, lw=2)
+ax.set_xlabel('# of dogs in our group of chosen animals')
+ax.set_ylabel('hypergeom PMF')
+plt.show()
 
-pval = hypergeom.sf(x-1, M, n, N)
-
-print(pval)
+prb = hypergeom.cdf(x, M, n, N)
+print(prb)
