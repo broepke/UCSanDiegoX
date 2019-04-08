@@ -9,22 +9,12 @@ n = len(list) # total number of samples
 mu = np.mean(list) # calculate the mean
 sigma = np.std(list)
 var = np.var(list)
+var_u = np.var(list, ddof=1) #add ddof=1 for unbiased (Bessle Corrected)
 sem = sp.sem(list)
 
 print("mean = ", mu)
 print("std. dev. = ", sigma)
 print("raw variance ('S^2') = ", var)
+print("unbiased sample variace = ", var_u)
 print('standard error of the mean = ', sem)
 print("standard error = ", sigma/sqrt(n))
-
-# Calculate the "Unbiased Sample Variance"
-for i in list:
-    total += (i-mu)**2
-
-print("unbiased sample variace = ",total/(n-1))
-
-# Calculate it another way
-#print(var * (n/(n-1)))
-
-# Raw variance is also Std.Dev Squared
-# print(sigma**2)

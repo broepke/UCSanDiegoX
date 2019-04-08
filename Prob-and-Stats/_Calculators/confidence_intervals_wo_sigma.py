@@ -13,21 +13,16 @@ p = 0.90
 total = 0
 n = len(list)
 mu = np.mean(list)
-var = np.var(list)
+var = np.var(list, ddof=1)  # add ddof=1 for unbiased (Bessle Corrected)
 bounds = t.interval(p, len(list)-1, loc=np.mean(list), scale=sem(list))
 critical_t = t.ppf(((1+p)/2),n-1)
 
-# Calculate the "Unbiased Sample Variance" - BESSEL CORRECTED
-for i in list:
-    total += (i-mu)**2
-usv = total/(n-1)
-
-sigma_est = sqrt(usv)
+sigma_est = sqrt(var)
 std_error = critical_t * sigma_est / sqrt(n)
 
 print('Mean =', mu)
 print('Critical T =', critical_t)
-print('Unbiased Sample Variace (Bessel Corrected) = ', usv)
+print('Unbiased Sample Variace (Bessel Corrected) = ', var)
 print('Standard Deviation (Estimation) =', sigma_est)
 print('Standard Error =', std_error)
 print('Lower Bounds =', bounds[0])
