@@ -3,7 +3,7 @@ import numpy as np
 
 
 k = 1
-p = 0.25
+p = 0.3
 
 expect = geom.expect(args=(p,), loc=0)
 mean = geom.mean(p)
