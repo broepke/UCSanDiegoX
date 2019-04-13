@@ -29,4 +29,5 @@ for i in choose_k:
     if sum(i) % 3 == 0:
         counter += 1
 
-print('Probability of chosing a sum of a multiple of 3 from 6 balls is =', counter / len(choose_k))
+print('Probability of chosing a sum of a multiple of 3 from 6 balls is =',
+      counter / len(choose_k))
