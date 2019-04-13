@@ -1,28 +1,19 @@
-from scipy import stats
+from scipy.stats import t, ttest_ind, ttest_1samp
 import numpy as np
+from math import sqrt
 
-# The location (loc) keyword specifies the mean.
-# The scale (scale) keyword specifies the standard deviation.
+# T-Test - Tesla Example from Class
 
-np.random.seed(12345678)
-mu = 68
-sigma = 4
-n = 10
+mean_assumption = 4.0
+sample = [3.74, 4.73, 3.85, 3.96, 4.11, 4.30, 4.28, 4.02]
+mu = np.mean(sample)
+sigma = np.std(sample)
+var = np.var(sample, ddof=1)
+n = len(sample)
+t_stat = (mu - mean_assumption) / sqrt(var / n)
+p_value = 1 - t.cdf(t_stat, n - 1)
 
-rvs1 = stats.norm.rvs(loc=mu, scale=sigma, size=n)
-rvs2 = stats.norm.rvs(loc=mu, scale=sigma, size=n)
-
-a = stats.ttest_ind(rvs1, rvs2)
-print(a)
-
-rvs = stats.norm.rvs(loc=mu, scale=sigma, size=n)
-
-print(rvs)
-print('check the actual mean of the array = ', np.mean(rvs))
-print('check the actual std. dev. of array', np.std(rvs))
-
-b = stats.ttest_1samp(rvs, mu)
-c = stats.ttest_1samp(rvs, 0.0)
-
-print(b)
-print(c)
+print('mean =', mu)
+print('variation (bessel corrected) =', var)
+print('t statistic =', t_stat)
+print('p value =', p_value)
