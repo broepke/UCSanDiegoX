@@ -3,8 +3,8 @@ import numpy as np
 from math import sqrt
 
 # T-Test - Tesla Example from Class
-mean_assumption = .5
-sample = [1,1,1,0]
+mean_assumption = 18
+sample = [18.380000,18.551021,16.690000,26.980000,13.340000,19.590000]
 
 
 # using manual calulations for most of the t-test.  From class
