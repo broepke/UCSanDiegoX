@@ -27,9 +27,3 @@ print('Standard Deviation (Estimation) =', sigma_est)
 print('Standard Error =', std_error)
 print('Lower Bounds =', bounds[0])
 print('Upper Bounds =', bounds[1])
-
-
-# Randome stuff
-# print('PDF =', t.pdf(1,3))
-# print('CDF =', t.cdf(1,3))
-# print('PPF =', t.ppf(0.95,3))

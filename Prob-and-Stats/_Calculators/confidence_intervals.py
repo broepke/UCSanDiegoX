@@ -22,9 +22,9 @@ print('Upper Bounds =', bounds[1])
 # in a sample of 121 users, the sample mean was 3.7
 # find the 95% confidence interval for the distribtuion mean.
 ci = 0.95
-sig = 2
-mean = 3.7
-users = 121
+sig = .15
+mean = 17.65
+users = 50
 inv_theta = norm.ppf((1+ci)/2)
 std_error = sig/sqrt(users)
 
