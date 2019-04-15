@@ -1,5 +1,6 @@
 import itertools
 from math import factorial
+from scipy import special as sp
 
 
 vals = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
@@ -14,5 +15,5 @@ n = len(A)
 # print("{}-combinations of {}: {}".format(k,A,choose_k))
 # print("Number of combinations = {}".format(len(choose_k)  ))
 
-# Print |A|!/(k!(|A|-k)!) directly
-print(int(factorial(len(A))/(factorial(k)*factorial(len(A)-k))))
+n_k = sp.binom(n,k)
+print(n_k)
