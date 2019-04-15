@@ -25,3 +25,13 @@ print('inverse calcualtions = the number of standard deviations you need from me
 print(inv_1)
 print(inv_2)
 print(inv_3)
+
+# ----- output from the above code -----
+# 1-2-3 standard deviations
+# 0.6826894921370859
+# 0.9544997361036416
+# 0.9973002039367398
+# inverse calcualtions = the number of standard deviations you need from mean
+# 1.2815515655446004
+# 1.6448536269514722
+# 2.3263478740408408
