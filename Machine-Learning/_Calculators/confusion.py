@@ -54,13 +54,13 @@ np.add.at(c, (x, y), 1)
 print('\n', 'using the np.add.at method')
 print(c)
 
-
+# using Sckikit-learn
 d = confusion_matrix(x, y)
 
 print('\n', 'using the confusion matrix from scikit-learn')
 print(d)
 
-
+# using a pandas crosstab
 y_actu = pd.Series(x, name='Actual')
 y_pred = pd.Series(y, name='Predicted')
 df_confusion = pd.crosstab(y_actu, y_pred)
@@ -68,7 +68,7 @@ df_confusion = pd.crosstab(y_actu, y_pred)
 print('\n', 'using pandas crostab')
 print(df_confusion)
 
-
+'''
 def plot_confusion_matrix(df_confusion, title='Confusion matrix', cmap=plt.cm.gray_r):
     plt.matshow(df_confusion, cmap=cmap) # imshow
     #plt.title(title)
@@ -82,3 +82,4 @@ def plot_confusion_matrix(df_confusion, title='Confusion matrix', cmap=plt.cm.gr
 
 plot_confusion_matrix(df_confusion)
 plt.show()
+'''
