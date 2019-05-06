@@ -41,4 +41,11 @@ for i in range(len(testy)):
 
 confusion = np.array([row_no, row_dh, row_sl])
 
-print(confusion)
+# print(confusion)
+
+# here is how you can accomplish the same thing as above with np.add.at
+c = np.zeros((3, 3), dtype=int)
+
+np.add.at(c, (x, y), 1)
+
+print(c)
