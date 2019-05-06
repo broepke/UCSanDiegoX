@@ -44,30 +44,36 @@ for i in range(len(testy)):
 
 confusion = np.array([row_no, row_dh, row_sl])
 
-print('\n', 'iterating lists method')
+print()
+print('iterating lists method')
 print(confusion)
 
 # here is how you can accomplish the same thing as above with np.add.at
-c = np.zeros((3, 3), dtype=int)
-np.add.at(c, (x, y), 1)
+confusion_numpy = np.zeros((3, 3), dtype=int)
+np.add.at(confusion_numpy, (x, y), 1)
 
-print('\n', 'using the np.add.at method')
-print(c)
+print()
+print('using the np.add.at method')
+print(confusion_numpy)
 
 # using Sckikit-learn
-d = confusion_matrix(x, y)
+confusion_scikit = confusion_matrix(x, y)
 
-print('\n', 'using the confusion matrix from scikit-learn')
-print(d)
+print()
+print('using the confusion matrix from scikit-learn')
+print(confusion_scikit)
 
 # using a pandas crosstab
 y_actu = pd.Series(x, name='Actual')
 y_pred = pd.Series(y, name='Predicted')
 df_confusion = pd.crosstab(y_actu, y_pred)
 
-print('\n', 'using pandas crostab')
+print()
+print()
+print('using pandas crostab')
 print(df_confusion)
 
+# plot out the confusion matrix as a heatmap
 '''
 def plot_confusion_matrix(df_confusion, title='Confusion matrix', cmap=plt.cm.gray_r):
     plt.matshow(df_confusion, cmap=cmap) # imshow
