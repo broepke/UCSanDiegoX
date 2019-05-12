@@ -2,8 +2,8 @@ from scipy.stats import bernoulli
 import numpy as np
 
 
-k = 1
-p = 0.5
+k = 3
+p = 0.4
 
 expect = bernoulli.expect(args=(p,), loc=0)
 mean = bernoulli.mean(p)
