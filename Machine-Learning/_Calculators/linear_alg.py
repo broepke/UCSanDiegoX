@@ -69,3 +69,9 @@ xt = np.transpose(x)
 
 print(np.dot(xt,x))
 print(np.dot(x,xt))
+
+s = np.array([[5,3],[6,4]])
+t = np.array([[1,4],[2,6]])
+
+s_inv = np.linalg.inv(s)
+print(np.dot(s_inv,t))
