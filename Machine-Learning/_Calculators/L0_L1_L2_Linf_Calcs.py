@@ -18,3 +18,21 @@ print(np.linalg.norm(x-y, ord=2),'\n')
 
 print("Infinity (max) length of the vector:")
 print(np.linalg.norm(x-y, np.inf))
+
+# A spherical Gaussian has mean  𝜇=(1,0,0) .
+# At which of the following points will the density be
+# the same as at (1,1,0)? Select all that apply.
+
+print('')
+mu = np.array([1,0,0])
+a = np.array([1,1,0])
+b = np.array([0,0,0])
+c = np.array([1,1,1])
+d = np.array([2,0,0])
+e = np.array([1,0,1])
+
+print('base', np.linalg.norm(mu-a, ord=2))
+print('1', np.linalg.norm(mu-b, ord=2))
+print('2', np.linalg.norm(mu-c, ord=2))
+print('3', np.linalg.norm(mu-d, ord=2))
+print('4', np.linalg.norm(mu-e, ord=2))
