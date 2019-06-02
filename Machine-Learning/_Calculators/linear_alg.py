@@ -77,3 +77,21 @@ t = np.array([[1, 4], [2, 6]])
 
 s_inv = np.linalg.inv(s)
 print(np.dot(s_inv, t))
+
+x = np.array([1,4])
+y = np.array([4,1])
+
+print('x-y^t', x - np.transpose(y))
+
+# Find the determinant of a Matrix
+a = np.array([[3,1],[1,2]])
+print(np.linalg.det(a))
+
+# a matrix is not invertable if it's determinant |A| = 0 (singular)
+# note - this is the same matrix from above where you can't get an inverse
+a = np.array([[1, 2], [3, 6]])
+print(np.linalg.det(a))
+
+sym = np.array([[3,1,-2],[1,4,0],[-2,0,6]])
+print(sym)
+print(np.transpose(sym))
