@@ -9,4 +9,11 @@ w = np.array([-3,1])
 x = np.array([1,1])
 b = -6
 
-print(x.dot(x)+b)
+result = w.dot(x)+b
+
+print('result', result)
+
+if result > 0:
+    print('Classify as 1')
+else:
+    print('Classify as -1')
