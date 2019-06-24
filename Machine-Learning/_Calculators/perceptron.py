@@ -7,3 +7,6 @@ clf = Perceptron(tol=1e-3, random_state=0)
 clf.fit(X, Y)
 
 print(clf.score(X, Y))
+
+print(X.shape)
+print(X.ndim)
