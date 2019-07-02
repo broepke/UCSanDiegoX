@@ -7,3 +7,4 @@ venv/
 *.pkl
 .idea/vcs.xml
 .vscode/
+*.gz
