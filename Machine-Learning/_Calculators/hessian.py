@@ -30,5 +30,5 @@ def hessian(x):
 
 
 # x = np.random.randn(100, 100, 100)
-x = np.array([[-1,1],[1,-1]])
+x = np.array([[1,1],[1,2]])
 print(hessian(x))
