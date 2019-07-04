@@ -34,7 +34,7 @@ print('Eigenvalues:\n', eig[0])
 # to project points into two dimensions. What would be the
 # resulting two-dimensional projection of the point  𝑥=(2‾√,−32‾√,2) ?
 project_x = U.dot(x)
-print('Projected first two values of X onto U =', project_x[:2])
+print('Projected first two values of x onto U =', project_x[:2])
 
 # e) Now suppose we use the projection in (d) to reconstruct a point  𝑥ˆ
 # in the original three-dimensional space. What is the Euclidean
@@ -45,8 +45,8 @@ print('Projected first two values of X onto U =', project_x[:2])
 u1 = x.dot(U[0]) * U[0]
 u2 = x.dot(U[1]) * U[1]
 
-reconstruct = u1 + u2
+reconstructed = u1 + u2
 
-dist = distance.euclidean(x, reconstruct)
+dist = distance.euclidean(x, reconstructed)
 
 print('The euclidian distance is =', dist)
