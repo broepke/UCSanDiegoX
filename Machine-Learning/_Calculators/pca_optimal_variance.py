@@ -8,8 +8,7 @@ sigma = np.array([[4, 2, -3], [2, 9, 0], [-3, 0, 9]])
 x1 = np.array([[1], [0], [0]])
 x2 = np.array([[0], [-1], [0]])
 x3 = np.array([[1], [1], [0]])
-# x3_hat = x3 / (x3**2).sum()**0.5
-x3_hat = (1/sqrt(2)) * x3
+x3_hat = x3 / (x3**2).sum()**0.5
 
 print('Original Matrix')
 print(sigma)
