@@ -8,3 +8,4 @@ venv/
 .idea/vcs.xml
 .vscode/
 *.gz
+*~$*

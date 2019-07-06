@@ -8,25 +8,21 @@ y = np.array([1, 0])
 # Calculate the magnitude manually
 def magnitude(array):
 
-    mag = 0
-    # Sum the Squares of Each Value
-    for i in array:
-        mag += i**2
-
-    # Take the SqRt of those sums
-    mag = sqrt(mag)
+    mag = sqrt(np.sum([array ** 2]))
 
     return mag
 
 
-print(magnitude(x))
-print(magnitude(y))
+print('manual calc x =', magnitude(x))
+print('manual calc y =', magnitude(y))
 
 # Use numpy to Calculate the same
-print(np.linalg.norm(x))
-print(np.linalg.norm(y))
+print('numpy calc y =', np.linalg.norm(x))
+print('numpy calc y =', np.linalg.norm(y))
 
 
 # Get the unit vector to compare
 x_hat = x / (x**2).sum()**0.5
-print(x_hat)
+print('Unit Vector for x', x_hat)
+
+print('Lenth of of Unit Vector =', np.linalg.norm(x_hat))
