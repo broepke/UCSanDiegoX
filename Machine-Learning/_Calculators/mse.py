@@ -28,11 +28,12 @@ print('c)', mse)
 # such that this rule has the smallest possible mean squared error
 # on the four training points. What are  𝑎  and  𝑏 ?
 
-best_a = np.cov(x, y, ddof=0)[0][1] / np.var(x)
+best_a = np.cov(x, y, ddof=0)[1][0] / np.var(x)
 print('best fit a', best_a)
 
 best_b = np.mean(y) - (best_a * np.mean(x))
 print('best fit b', best_b)
+
 
 # e) Continuing from part (d), what is the MSE of this
 # optimal linear predictor?
