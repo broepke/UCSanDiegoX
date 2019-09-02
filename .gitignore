@@ -103,6 +103,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+.idea
 
 # Spyder project settings
 .spyderproject
@@ -123,3 +124,7 @@ dmypy.json
 .pyre/
 .DS_Store
 *.m~
+
+# Other
+*.pkl
+*.gz
