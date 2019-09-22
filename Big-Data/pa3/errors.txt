@@ -1,0 +1,159 @@
+[Executed at: Sun Sep 22 8:27:29 PDT 2019]
+
+Notebook: ComputeStatistics.ipynb
+2019-09-22 08:27:20 WARN Utils:66 - Your hostname, ip-172-31-27-111 resolves to a loopback address: 127.0.0.1; using 172.31.27.111 instead (on interface ens5)
+2019-09-22 08:27:20 WARN Utils:66 - Set SPARK_LOCAL_IP if you need to bind to another address
+2019-09-22 08:27:21 WARN NativeCodeLoader:62 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+
+[Stage 0:> (0 + 8) / 8]
+
+1. Criterion: type_check_1
+[Passed]
+
+2. Criterion: type_check_2
+[Passed]
+
+3. Criterion: type_check_3
+[Passed]
+
+4. Criterion: type_check_4
+[Passed]
+
+5. Criterion: type_check_5
+[Passed]
+
+6. Criterion: shape_check_1
+[Passed]
+
+7. Criterion: shape_check_2
+[Passed]
+
+8. Criterion: shape_check_3
+[Passed]
+
+9. Criterion: shape_check_4
+[Passed]
+
+10. Criterion: shape_check_5
+[Passed]
+
+11. Criterion: value_chk_1
+[Passed]
+
+12. Criterion: value_chk_2
+[Passed]
+
+13. Criterion: value_chk_3
+[Passed]
+
+14. Criterion: value_chk_4
+[Passed]
+
+15. Criterion: value_chk_5
+[Passed]
+
+16. Criterion: vt_1
+[Passed]
+
+17. Criterion: vt_2
+[Passed]
+
+18. Criterion: vt_3
+[Passed]
+
+19. Criterion: vt_4
+[Passed]
+
+20. Criterion: vt_5
+[Passed]
+
+21. Criterion: ht1
+[Passed]
+
+22. Criterion: ht1_1
+[Passed]
+
+23. Criterion: ht1_2
+[Passed]
+
+24. Criterion: ht1_3
+Traceback:
+---------------------------------------------------------------------------
+AttributeError Traceback (most recent call last)
+in ()
+1 # Hidden Tests here
+2 ### BEGIN HIDDEN TESTS
+----> 3 assert (np.around(O, decimals=6) == np.around(expected_result['O'], decimals=6)).all(), "Output value of O does not match expected output of function. You returned " + str(O)
+4 ### END HIDDEN TESTS
+
+AttributeError: 'bool' object has no attribute 'all'
+[Failed]
+
+25. Criterion: ht1_4
+Traceback:
+---------------------------------------------------------------------------
+AttributeError Traceback (most recent call last)
+in ()
+1 # Hidden Tests here
+2 ### BEGIN HIDDEN TESTS
+----> 3 assert (np.around(NO, decimals=6) == np.around(expected_result['NO'], decimals=6)).all(), "Output value of NO does not match expected output of function. You returned " + str(NO)
+4 ### END HIDDEN TESTS
+
+AttributeError: 'bool' object has no attribute 'all'
+[Failed]
+
+26. Criterion: ht2
+[Passed]
+
+27. Criterion: ht2_1
+[Passed]
+
+28. Criterion: ht2_2
+[Passed]
+
+29. Criterion: ht2_3
+[Passed]
+
+30. Criterion: ht2_4
+[Passed]
+
+31. Criterion: fvt_1
+[Passed]
+
+32. Criterion: fvt_2
+[Passed]
+
+33. Criterion: fht_1
+Traceback:
+---------------------------------------------------------------------------
+ValueError Traceback (most recent call last)
+in ()
+2 ### BEGIN HIDDEN TESTS
+3 data_list = [np.array([-0.09496909, 0.09428672, -0.16026719]), np.array([ np.nan, -0.13538759, -0.49613667])]
+----> 4 eigval, eigvec = process(data_list)
+5 expected_result = {'eigval': np.array([4.90069129e-02, -7.61726349e-03, 1.17502758e-17]),
+6 'eigvec': np.array([[-3.66773999e-01, 9.30310074e-01, 8.89360856e-16],
+
+in process(data_list)
+2 # compute covariance matrix
+3 RDD=sc.parallelize(data_list)
+----> 4 OUT=computeCov(RDD)
+5 #find PCA decomposition
+6 eigval,eigvec=LA.eig(OUT['Cov'])
+
+in computeCov(RDDin)
+10 (S,N)=OuterRDD.reduce(sumWithNan)
+11 E,NE,Mean,O,NO=HW_func(S,N)
+---> 12 Cov=O/NO - np.outer(Mean,Mean)
+13 # Output also the diagnal which is the variance for each day
+14 Var=np.array([Cov[i,i] for i in range(Cov.shape[0])])
+
+ValueError: operands could not be broadcast together with shapes (2,3) (3,3)
+[Failed]
+
+34. Criterion: fht_2
+[Passed]
+
+The notebook had 3 failure(s).
