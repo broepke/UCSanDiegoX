@@ -126,7 +126,7 @@ dmypy.json
 *.m~
 
 # Other
-*.pkl
+# *.pkl
 *.gz
 datasets/
 Big-Data/Section1-Spark-Basics/0.MemoryLatency/logs/
