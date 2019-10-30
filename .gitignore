@@ -131,3 +131,5 @@ dmypy.json
 datasets/
 Big-Data/Section1-Spark-Basics/0.MemoryLatency/logs/
 Big-Data/Data/
+Big-Data/pa8/Data/higgs_test_large.csv
+Big-Data/pa8/Data/higgs_train_large.csv

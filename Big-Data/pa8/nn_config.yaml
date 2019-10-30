@@ -1,0 +1,32 @@
+## Training data file path
+training_data_path: /home/ubuntu/HW8/Data/higgs_train_large.csv
+
+## Testing data file path
+test_data_path: /home/ubuntu/HW8/Data/higgs_test_large.csv 
+
+## Location in which you will save the pickle file containing predictions on test data
+output_predictions_pickle_path: ./test_predictions.pkl
+
+## How to split the input training data into train and validation sets. Value of 0.8 means that if there were initially 100 training examples in the input data, you should split them such that the first 80 are used as training examples and last 20 should be used for validation.
+training_to_validation_ratio: 0.8
+
+## the learning rate you should use for your optimizer 
+learning_rate: 0.05
+
+## the total number of epochs or iterations to run over the (80) training examples
+epochs: 200
+
+## the number of mini batches in which you should split your training examples. Continuing with our example, if this value is 10, then each mini batch will have 8 training examples.
+num_mini_batches: 5
+
+## this variable is for your own use to modify when you would like to print any debug statements inside your training loop. For example, a value of 5 may suggest that you should print the training loss, validation loss, training accuracy and validation accuracy every 5 epochs.
+display_step: 1
+
+## the size of the network. If first_layer: 20 and second_layer: 8 then you should set the number of hidden units in first hidden layer and second layer to be 20 and 8 respectively.
+hidden_layer_sizes: 
+    first_layer: 20
+    second_layer: 8
+
+## for grading purposes, you may ignore
+dataset_size: large
+grading_script_path: /home/ubuntu/HW8/grade_test_submission.py
