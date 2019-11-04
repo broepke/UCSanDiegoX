@@ -1,8 +1,8 @@
 ## Training data file path
-training_data_path: /home/ubuntu/HW8/Data/higgs_train_large.csv
+training_data_path: /Data/higgs_train_large.csv
 
 ## Testing data file path
-test_data_path: /home/ubuntu/HW8/Data/higgs_test_large.csv 
+test_data_path: /Data/higgs_test_large.csv 
 
 ## Location in which you will save the pickle file containing predictions on test data
 output_predictions_pickle_path: ./test_predictions.pkl
@@ -29,4 +29,4 @@ hidden_layer_sizes:
 
 ## for grading purposes, you may ignore
 dataset_size: large
-grading_script_path: /home/ubuntu/HW8/grade_test_submission.py
+grading_script_path: /grade_test_submission.py
