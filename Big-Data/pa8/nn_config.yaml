@@ -1,8 +1,8 @@
 ## Training data file path
-training_data_path: /Data/higgs_train_large.csv
+training_data_path: ./Data/higgs_train_large.csv
 
 ## Testing data file path
-test_data_path: /Data/higgs_test_large.csv 
+test_data_path: ./Data/higgs_test_large.csv 
 
 ## Location in which you will save the pickle file containing predictions on test data
 output_predictions_pickle_path: ./test_predictions.pkl
